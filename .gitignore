@@ -2,3 +2,5 @@
 *.pyc
 provider_manager.log
 watchdog.pid
+providers_state.json
+clawx_watchdog.log
