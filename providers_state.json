@@ -1,0 +1,52 @@
+{
+  "providers": {
+    "custom-customf9": {
+      "enabled": true,
+      "status": "online",
+      "status_code": 401,
+      "latency": 612,
+      "failures": 0,
+      "last_check": "2026-03-20 23:24:09",
+      "last_error": "HTTP 401"
+    },
+    "custom-custom7e": {
+      "enabled": true,
+      "status": "online",
+      "status_code": 401,
+      "latency": 628,
+      "failures": 0,
+      "last_check": "2026-03-20 23:24:10",
+      "last_error": "HTTP 401"
+    },
+    "custom-custom09": {
+      "enabled": true,
+      "status": "online",
+      "status_code": 401,
+      "latency": 576,
+      "failures": 0,
+      "last_check": "2026-03-20 23:24:10",
+      "last_error": "HTTP 401"
+    },
+    "custom-custom61": {
+      "enabled": true,
+      "status": "online",
+      "status_code": 401,
+      "latency": 622,
+      "failures": 0,
+      "last_check": "2026-03-20 23:24:11",
+      "last_error": "HTTP 401"
+    }
+  },
+  "priority": [
+    "custom-customf9",
+    "custom-custom7e",
+    "custom-custom09",
+    "custom-custom61"
+  ],
+  "last_switch": null,
+  "auto_switch_enabled": false,
+  "notify_on_reply": true,
+  "notify_sound_freq": 880,
+  "notify_sound_ms": 180,
+  "notify_sound_volume": 100
+}
