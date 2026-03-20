@@ -1,0 +1,4 @@
+﻿__pycache__/
+*.pyc
+provider_manager.log
+watchdog.pid

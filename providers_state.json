@@ -4,36 +4,36 @@
       "enabled": true,
       "status": "online",
       "status_code": 401,
-      "latency": 612,
+      "latency": 499,
       "failures": 0,
-      "last_check": "2026-03-20 23:24:09",
+      "last_check": "2026-03-20 23:29:02",
       "last_error": "HTTP 401"
     },
     "custom-custom7e": {
       "enabled": true,
       "status": "online",
       "status_code": 401,
-      "latency": 628,
+      "latency": 521,
       "failures": 0,
-      "last_check": "2026-03-20 23:24:10",
+      "last_check": "2026-03-20 23:29:03",
       "last_error": "HTTP 401"
     },
     "custom-custom09": {
       "enabled": true,
       "status": "online",
       "status_code": 401,
-      "latency": 576,
+      "latency": 702,
       "failures": 0,
-      "last_check": "2026-03-20 23:24:10",
+      "last_check": "2026-03-20 23:29:04",
       "last_error": "HTTP 401"
     },
     "custom-custom61": {
       "enabled": true,
       "status": "online",
       "status_code": 401,
-      "latency": 622,
+      "latency": 604,
       "failures": 0,
-      "last_check": "2026-03-20 23:24:11",
+      "last_check": "2026-03-20 23:29:04",
       "last_error": "HTTP 401"
     }
   },

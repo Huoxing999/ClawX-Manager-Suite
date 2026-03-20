@@ -1,72 +1,74 @@
-# ClawX Provider Manager Portable
+# ClawX Manager Suite
 
-一个可直接分发给其他人使用的便携版 Provider Manager。
+A rebuilt desktop management suite for ClawX / OpenClaw, based on the stable portable Provider Manager and integrated with ClawX Watchdog.
 
-## 特点
+## What it includes
 
-- 纯 Python 标准库实现，无需额外 pip 安装
-- 默认自动读取当前 Windows 用户目录下的 OpenClaw 配置：
-  - `%USERPROFILE%\.openclaw\openclaw.json`
-- 状态文件和日志保存在项目目录内：
-  - `providers_state.json`
-  - `provider_manager.log`
-- 双击 `start.bat` 即可启动
+- **Providers**
+  - View provider/model priority
+  - Check health and latency
+  - Enable / disable providers
+  - Reorder priority
+  - Apply primary switch immediately
 
-## 运行要求
+- **Logs**
+  - View runtime logs inside the app
 
-- Windows
-- 已安装 Python 3（确保 `py` 命令可用）
-- 本机已安装并配置 OpenClaw / ClawX，并且存在：
-  - `%USERPROFILE%\.openclaw\openclaw.json`
+- **Reminder**
+  - Fixed `notify.wav` playback
+  - Test reminder sound
+  - Auto reminder when an assistant reply is completed
+  - Reply completion is detected from:
+    - `%USERPROFILE%\.openclaw\agents\main\sessions\*.jsonl`
 
-## 启动方式
+- **Watchdog**
+  - Integrated as a dedicated left-side module page
+  - View status
+  - View script path
+  - View watchdog log output
+  - Start / Stop / Refresh
 
-### 方式 1：双击启动
+## Project location
 
-直接双击：
+Current working project directory:
+
+- `C:\Users\HeHesama\Desktop\ClawX_Manager_Suite_Fresh`
+
+## Key bundled files
+
+- `provider_manager.py`
+- `clawx_watchdog.py`
+- `clawx_watchdog.log`
+- `notify.wav`
+- `start.bat`
+
+## Notes
+
+- This repository is the **working integrated suite version**, not the earlier broken rebuild attempts.
+- The suite was rebuilt from the stable portable provider-manager base and then re-integrated with Watchdog.
+- Reminder sound logic keeps using the local fixed `notify.wav` file.
+
+## Running
+
+### Option 1
+Double-click:
 
 - `start.bat`
 
-### 方式 2：命令行启动
+### Option 2
+Run manually:
 
-```bat
+```bash
 py -3 provider_manager.py
 ```
 
-## 文件说明
+## Recommended future cleanup
 
-- `provider_manager.py`：主程序
-- `start.bat`：启动脚本
-- `providers_state.json`：运行状态（首次启动后自动生成）
-- `provider_manager.log`：运行日志（首次启动后自动生成）
+Some runtime-generated files should usually be ignored from version control, such as:
 
-## 适配说明
+- `__pycache__/`
+- `provider_manager.log`
+- `watchdog.pid`
+- temporary local state / runtime caches
 
-当前版本会自动使用当前登录用户的 `%USERPROFILE%`，因此复制到其他 Windows 电脑后，只要对方：
-
-1. 安装了 Python 3
-2. 已安装并配置 OpenClaw / ClawX
-3. 配置文件位于 `%USERPROFILE%\.openclaw\openclaw.json`
-
-即可直接运行。
-
-## 如果无法启动
-
-请检查：
-
-1. 是否安装 Python 3
-   - 在命令行运行：`py -3 --version`
-2. 是否存在 OpenClaw 配置文件
-   - `%USERPROFILE%\.openclaw\openclaw.json`
-3. 是否被安全软件拦截
-4. 是否是精简系统导致系统提示音能力异常
-
-## 后续可扩展
-
-如果要进一步做成真正的公开分发版本，建议下一步补充：
-
-- 首次运行向导
-- 配置文件路径手动选择
-- 打包为 exe
-- 多语言 README
-- 发布版目录结构（release / docs / screenshots）
+These can be moved into `.gitignore` as the project gets cleaned up further.
